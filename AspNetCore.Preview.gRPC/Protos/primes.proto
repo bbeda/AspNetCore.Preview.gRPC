@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package Primes;
+
+service PrimeCalculator{
+    rpc IsPrime(NumberRequest) returns (IsPrimeReply){}
+}
+
+message NumberRequest{
+    int32 value=1;
+}
+
+message IsPrimeReply{
+    bool isPrime=1;
+}
